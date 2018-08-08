@@ -1,0 +1,88 @@
+<html>
+<!-- This is a comment in the source -->
+<h3><span style="background-color: #914c53; color: #ffffff; padding: 0 3px;">NCL Method</span></h3>
+First Innings score :
+<input id="firstInningsScore" value=""></p>
+First Innings overs : 
+<input id="firstInningsOvers" value=""></p>
+Second Innings Allocated Overs:
+<input id="SecondInningsOver" value=""></p>
+<button id="btnCalculate" onClick="calcNCLMethod();" >Calculate</button>
+
+</p>
+</p>
+<table border="2" >
+<tr align="center">
+<td>Fall of Wickets</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+</tr>
+  <tbody>
+<tr  align="center">
+<td>Target</td>
+<td><label id="lbZero">&nbsp;</label></td>
+<td><label id="lbOne">&nbsp;</label></td>
+<td><label id="lbTwo">&nbsp;</label></td>
+<td><label id="lbThree">&nbsp;</label></td>
+<td><label id="lbFour">&nbsp;</label></td>
+<td><label id="lbFive">&nbsp;</label></td>
+<td><label id="lbSix">&nbsp;</label></td>
+<td><label id="lbSeven">&nbsp;</label></td>
+<td><label id="lbEight">&nbsp;</label></td>
+<td><label id="lbNine">&nbsp;</label></td>
+</tr>
+</tbody>
+</table>
+
+<script>
+ 
+  function calcNCLMethod() {
+
+  var firstInningsScore;
+  var firstInningsOvers;
+  var SecondInningsOver;
+  firstInningsScore = Number(document.getElementById('firstInningsScore').value);
+  firstInningsOvers = Number(document.getElementById('firstInningsOvers').value);
+  SecondInningsOver = Number(document.getElementById('SecondInningsOver').value);
+
+  
+  
+if (firstInningsScore > 0 && firstInningsOvers > 0 && SecondInningsOver>0) 
+{
+  document.getElementById('lbZero').innerHTML = Math.ceil((document.getElementById('firstInningsScore').value/document.getElementById('firstInningsOvers').value)*document.getElementById('SecondInningsOver').value)+1;
+  document.getElementById('lbOne').innerHTML = Math.ceil((document.getElementById('firstInningsScore').value/document.getElementById('firstInningsOvers').value)*document.getElementById('SecondInningsOver').value)+1;
+  document.getElementById('lbTwo').innerHTML = Math.ceil((document.getElementById('firstInningsScore').value/document.getElementById('firstInningsOvers').value)*document.getElementById('SecondInningsOver').value)+1+1;
+  document.getElementById('lbThree').innerHTML = Math.ceil((document.getElementById('firstInningsScore').value/document.getElementById('firstInningsOvers').value)*document.getElementById('SecondInningsOver').value)+1+1;
+  document.getElementById('lbFour').innerHTML = Math.ceil((document.getElementById('firstInningsScore').value/document.getElementById('firstInningsOvers').value)*document.getElementById('SecondInningsOver').value)+1+1;
+  document.getElementById('lbFive').innerHTML = Math.ceil((document.getElementById('firstInningsScore').value/document.getElementById('firstInningsOvers').value)*document.getElementById('SecondInningsOver').value)+1+2;
+  document.getElementById('lbSix').innerHTML = Math.ceil((document.getElementById('firstInningsScore').value/document.getElementById('firstInningsOvers').value)*document.getElementById('SecondInningsOver').value)+1+2;
+  document.getElementById('lbSeven').innerHTML = Math.ceil((document.getElementById('firstInningsScore').value/document.getElementById('firstInningsOvers').value)*document.getElementById('SecondInningsOver').value)+1+2;
+  document.getElementById('lbEight').innerHTML = Math.ceil((document.getElementById('firstInningsScore').value/document.getElementById('firstInningsOvers').value)*document.getElementById('SecondInningsOver').value)+1+3;
+  document.getElementById('lbNine').innerHTML = Math.ceil((document.getElementById('firstInningsScore').value/document.getElementById('firstInningsOvers').value)*document.getElementById('SecondInningsOver').value)+1+3;
+  
+}
+else
+{
+  document.getElementById('lbZero').innerHTML = "0";
+  document.getElementById('lbOne').innerHTML = "0";
+  document.getElementById('lbTwo').innerHTML = "0";
+  document.getElementById('lbThree').innerHTML = "0";
+  document.getElementById('lbFour').innerHTML = "0";
+  document.getElementById('lbFive').innerHTML = "0";
+  document.getElementById('lbSix').innerHTML = "0";
+  document.getElementById('lbSeven').innerHTML = "0";
+  document.getElementById('lbEight').innerHTML = "0";
+  document.getElementById('lbNine').innerHTML = "0";
+}
+}
+</script>
+
+</html>
