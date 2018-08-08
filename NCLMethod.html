@@ -1,4 +1,4 @@
-<html>
+<!DOCTYPE html> <html lang="en"> <head itemscope itemtype="http://schema.org/WebSite"> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="canonical" href="http://sufiyany2k.5gbfree.com" itemprop="url"> <title itemprop='name'>My Cricket</title> <!-- Bootstrap Core CSS --> <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- Custom CSS --> <link href="css/landing-page.css" rel="stylesheet"> <!-- Custom Fonts --> <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css"> <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --> <!-- WARNING: Respond.js doesn't work if you view the page via file:// --> <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]--> </head> <body> <div class="intro-header"> <div class="container"> <div class="row"> <div class="col-lg-12"> <div class="intro-message"> <h1 id="hdrDescription">Webpage coming soom</h1> <hr class="intro-divider"> </div> </div> </div> </div> <!-- /.container --> </div> <!-- /.intro-header --> <!-- jQuery --> <script src="js/jquery.js"></script> <!-- Bootstrap Core JavaScript --> <script src="js/bootstrap.min.js"></script> </body> </html><!DOCTYPE html> <html lang="en"> <head itemscope itemtype="http://schema.org/WebSite"> <meta charset="utf-8"> <meta http-equiv="X-UA-Compatible" content="IE=edge"> <meta name="viewport" content="width=device-width, initial-scale=1"> <link rel="canonical" href="http://sufiyany2k.5gbfree.com" itemprop="url"> <title itemprop='name'>My Cricket</title> <!-- Bootstrap Core CSS --> <link href="css/bootstrap.min.css" rel="stylesheet"> <!-- Custom CSS --> <link href="css/landing-page.css" rel="stylesheet"> <!-- Custom Fonts --> <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"> <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css"> <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries --> <!-- WARNING: Respond.js doesn't work if you view the page via file:// --> <!--[if lt IE 9]> <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script> <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script> <![endif]--> </head> <body> <div class="intro-header"> <div class="container"> <div class="row"> <div class="col-lg-12"> <div class="intro-message"> <h1 id="hdrDescription">Webpage coming soom</h1> <hr class="intro-divider"> </div> </div> </div> </div> <!-- /.container --> </div> <!-- /.intro-header --> <!-- jQuery --> <script src="js/jquery.js"></script> <!-- Bootstrap Core JavaScript --> <script src="js/bootstrap.min.js"></script> </body> </html><html>
 <!-- This is a comment in the source -->
 <h3><span style="background-color: #914c53; color: #ffffff; padding: 0 3px;">NCL Method</span></h3>
 First Innings score :
@@ -8,7 +8,6 @@ First Innings overs :
 Second Innings Allocated Overs:
 <input id="SecondInningsOver" value=""></p>
 <button id="btnCalculate" onClick="calcNCLMethod();" >Calculate</button>
-
 </p>
 </p>
 <table border="2" >
@@ -52,35 +51,36 @@ Second Innings Allocated Overs:
   firstInningsScore = Number(document.getElementById('firstInningsScore').value);
   firstInningsOvers = Number(document.getElementById('firstInningsOvers').value);
   SecondInningsOver = Number(document.getElementById('SecondInningsOver').value);
-
-  
+  var rawTarget;
+  rawTarget=0;
   
 if (firstInningsScore > 0 && firstInningsOvers > 0 && SecondInningsOver>0) 
 {
-  document.getElementById('lbZero').innerHTML = Math.ceil((document.getElementById('firstInningsScore').value/document.getElementById('firstInningsOvers').value)*document.getElementById('SecondInningsOver').value)+1;
-  document.getElementById('lbOne').innerHTML = Math.ceil((document.getElementById('firstInningsScore').value/document.getElementById('firstInningsOvers').value)*document.getElementById('SecondInningsOver').value)+1;
-  document.getElementById('lbTwo').innerHTML = Math.ceil((document.getElementById('firstInningsScore').value/document.getElementById('firstInningsOvers').value)*document.getElementById('SecondInningsOver').value)+1+1;
-  document.getElementById('lbThree').innerHTML = Math.ceil((document.getElementById('firstInningsScore').value/document.getElementById('firstInningsOvers').value)*document.getElementById('SecondInningsOver').value)+1+1;
-  document.getElementById('lbFour').innerHTML = Math.ceil((document.getElementById('firstInningsScore').value/document.getElementById('firstInningsOvers').value)*document.getElementById('SecondInningsOver').value)+1+1;
-  document.getElementById('lbFive').innerHTML = Math.ceil((document.getElementById('firstInningsScore').value/document.getElementById('firstInningsOvers').value)*document.getElementById('SecondInningsOver').value)+1+2;
-  document.getElementById('lbSix').innerHTML = Math.ceil((document.getElementById('firstInningsScore').value/document.getElementById('firstInningsOvers').value)*document.getElementById('SecondInningsOver').value)+1+2;
-  document.getElementById('lbSeven').innerHTML = Math.ceil((document.getElementById('firstInningsScore').value/document.getElementById('firstInningsOvers').value)*document.getElementById('SecondInningsOver').value)+1+2;
-  document.getElementById('lbEight').innerHTML = Math.ceil((document.getElementById('firstInningsScore').value/document.getElementById('firstInningsOvers').value)*document.getElementById('SecondInningsOver').value)+1+3;
-  document.getElementById('lbNine').innerHTML = Math.ceil((document.getElementById('firstInningsScore').value/document.getElementById('firstInningsOvers').value)*document.getElementById('SecondInningsOver').value)+1+3;
+  rawTarget = Math.ceil((firstInningsScore/firstInningsOvers)*SecondInningsOver)+1;
+  document.getElementById('lbZero').innerHTML = rawTarget;
+  document.getElementById('lbOne').innerHTML = rawTarget;
+  document.getElementById('lbTwo').innerHTML = rawTarget+1;
+  document.getElementById('lbThree').innerHTML = rawTarget+1;
+  document.getElementById('lbFour').innerHTML = rawTarget+1;
+  document.getElementById('lbFive').innerHTML = rawTarget+2;
+  document.getElementById('lbSix').innerHTML = rawTarget+2;
+  document.getElementById('lbSeven').innerHTML = rawTarget+2;
+  document.getElementById('lbEight').innerHTML = rawTarget+3;
+  document.getElementById('lbNine').innerHTML = rawTarget+3;
   
 }
 else
 {
-  document.getElementById('lbZero').innerHTML = "0";
-  document.getElementById('lbOne').innerHTML = "0";
-  document.getElementById('lbTwo').innerHTML = "0";
-  document.getElementById('lbThree').innerHTML = "0";
-  document.getElementById('lbFour').innerHTML = "0";
-  document.getElementById('lbFive').innerHTML = "0";
-  document.getElementById('lbSix').innerHTML = "0";
-  document.getElementById('lbSeven').innerHTML = "0";
-  document.getElementById('lbEight').innerHTML = "0";
-  document.getElementById('lbNine').innerHTML = "0";
+  document.getElementById('lbZero').innerHTML = rawTarget;
+  document.getElementById('lbOne').innerHTML = rawTarget;
+  document.getElementById('lbTwo').innerHTML = rawTarget;
+  document.getElementById('lbThree').innerHTML = rawTarget;
+  document.getElementById('lbFour').innerHTML = rawTarget;
+  document.getElementById('lbFive').innerHTML = rawTarget;
+  document.getElementById('lbSix').innerHTML = rawTarget;
+  document.getElementById('lbSeven').innerHTML = rawTarget;
+  document.getElementById('lbEight').innerHTML = rawTarget;
+  document.getElementById('lbNine').innerHTML = rawTarget;
 }
 }
 </script>
