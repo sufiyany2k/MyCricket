@@ -63,7 +63,7 @@ Second Innings Allocated Overs:
   var rawTargetOnNine;
   rawTarget=0;
   
-if (firstInningsScore > 0 && firstInningsOvers > 0 && SecondInningsOver>0 && firstInningsOvers > SecondInningsOver) 
+if (firstInningsScore > 0 && firstInningsOvers > 0 && SecondInningsOver>0 && firstInningsOvers >= SecondInningsOver) 
 {
   rawTarget = Math.ceil((firstInningsScore/firstInningsOvers)*SecondInningsOver)+1;
   rawTargetOnOne  =rawTarget;
