@@ -52,21 +52,61 @@ Second Innings Allocated Overs:
   firstInningsOvers = Number(document.getElementById('firstInningsOvers').value);
   SecondInningsOver = Math.floor(Number(document.getElementById('SecondInningsOver').value));
   var rawTarget;
+  var rawTargetOnOne;
+  var rawTargetOnTwo;
+  var rawTargetOnThree;
+  var rawTargetOnFour;
+  var rawTargetOnFive;
+  var rawTargetOnSix;
+  var rawTargetOnSeven;
+  var rawTargetOnEight;
+  var rawTargetOnNine;
   rawTarget=0;
   
 if (firstInningsScore > 0 && firstInningsOvers > 0 && SecondInningsOver>0 && firstInningsOvers > SecondInningsOver) 
 {
   rawTarget = Math.ceil((firstInningsScore/firstInningsOvers)*SecondInningsOver)+1;
+  rawTargetOnOne  =rawTarget;
+	rawTargetOnTwo  =rawTarget+1;
+	rawTargetOnThree=rawTargetOnTwo+(1);
+	rawTargetOnFour =rawTargetOnThree+(1);
+	rawTargetOnFive =rawTargetOnFour+(2);
+	rawTargetOnSix  =rawTargetOnFive+(2);
+	rawTargetOnSeven=rawTargetOnSix+(2);
+	rawTargetOnEight=rawTargetOnSeven+(3);
+	rawTargetOnNine =rawTargetOnEight+(3);
+  
+  if(rawTarget>firstInningsScore+1)
+    rawTarget=firstInningsScore+1
+  if(rawTargetOnOne>firstInningsScore+1)
+    rawTargetOnOne=firstInningsScore+1
+  if(rawTargetOnTwo>firstInningsScore+1)
+    rawTargetOnTwo=firstInningsScore+1
+  if(rawTargetOnThree>firstInningsScore+1)
+    rawTargetOnThree=firstInningsScore+1
+  if(rawTargetOnFour>firstInningsScore+1)
+    rawTargetOnFour=firstInningsScore+1
+  if(rawTargetOnFive>firstInningsScore+1)
+    rawTargetOnFive=firstInningsScore+1
+  if(rawTargetOnSix>firstInningsScore+1)
+    rawTargetOnSix=firstInningsScore+1
+  if(rawTargetOnSeven>firstInningsScore+1)
+    rawTargetOnSeven=firstInningsScore+1
+  if(rawTargetOnEight>firstInningsScore+1)
+    rawTargetOnEight=firstInningsScore+1
+  if(rawTargetOnNine>firstInningsScore+1)
+    rawTargetOnNine=firstInningsScore+1
+  
   document.getElementById('lbZero').innerHTML = rawTarget;
-  document.getElementById('lbOne').innerHTML = rawTarget;
-  document.getElementById('lbTwo').innerHTML = rawTarget+1;
-  document.getElementById('lbThree').innerHTML = (rawTarget+1)+1;
-  document.getElementById('lbFour').innerHTML = (rawTarget+2)+1;
-  document.getElementById('lbFive').innerHTML = (rawTarget+3)+2;
-  document.getElementById('lbSix').innerHTML = (rawTarget+5)+2;
-  document.getElementById('lbSeven').innerHTML = (rawTarget+7)+2;
-  document.getElementById('lbEight').innerHTML = (rawTarget+9)+3;
-  document.getElementById('lbNine').innerHTML = (rawTarget+12)+3;
+  document.getElementById('lbOne').innerHTML = rawTargetOnOne;
+  document.getElementById('lbTwo').innerHTML = rawTargetOnTwo;
+  document.getElementById('lbThree').innerHTML = rawTargetOnThree;
+  document.getElementById('lbFour').innerHTML = rawTargetOnFour;
+  document.getElementById('lbFive').innerHTML = rawTargetOnFive;
+  document.getElementById('lbSix').innerHTML = rawTargetOnSix;
+  document.getElementById('lbSeven').innerHTML = rawTargetOnSeven;
+  document.getElementById('lbEight').innerHTML = rawTargetOnEight;
+  document.getElementById('lbNine').innerHTML = rawTargetOnNine;
   
 }
 else
