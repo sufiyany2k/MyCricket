@@ -23,7 +23,7 @@
 
 </p>
 </p>
-<table border="1" >
+<table border="1" id="tblCalculatedScore" style="visibility:hidden">
 <tr align="center">
 <td>Fall of Wickets</td>
 <td>0</td>
@@ -135,6 +135,12 @@ else
   document.getElementById('lbEight').innerHTML = rawTarget;
   document.getElementById('lbNine').innerHTML = rawTarget;
 }
+	       var elem=document.getElementById("tblCalculatedScore");
+     var hide = elem.style.display =="none";
+     if (hide) {
+         elem.style.display="table";
+    } 
+
 }
 </script>
 </body>
