@@ -1,10 +1,22 @@
 <html>
 	<head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: right;
+  padding: 8px;
+}</style>
 </head>
 <body>
 <!-- This is a comment in the source -->
-<h2><span style="background-color: #914c53; color: #ffffff; padding: 0 3px;">NCL Method</span></h2>
+<h1 style="font-size:10vw; text-align:center" ><span style="background-color: #914c53; color: #ffffff; padding: 0 3px;">NCL Method</span></h1>
 	<table>
 		<tr >
 			<td>First Innings score :</td>
@@ -18,12 +30,13 @@
 			<td>Second Innings Allocated Overs:</td>
 			<td><input id="SecondInningsOver" value=""></td>
 		</tr>
-		<tr align="center"><td><button id="btnCalculate" onClick="calcNCLMethod();" >Calculate</button></td></tr>
+		<tr align="center"><td colspan=2><button id="btnCalculate" onClick="calcNCLMethod();" >Calculate</button></td></tr>
 </table>
 
 </p>
 </p>
-<table border="1" id="tblCalculatedScore" style="display:none;">
+<div style="overflow-x:auto;">
+<table border="1" id="tblCalculatedScore" style="display:none;" align="center">
 <tr align="center">
 <td>Fall of Wickets</td>
 <td>0</td>
@@ -53,7 +66,7 @@
 </tr>
 </tbody>
 </table>
-
+</div>
 <script>
  
   function calcNCLMethod() {
