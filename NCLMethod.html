@@ -1,3 +1,4 @@
+
 <html>
 	<head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -91,10 +92,16 @@ th, td {
 
   var firstInningsScore;
   var firstInningsOvers;
+    var firstInningsFractionBalls;
   var SecondInningsOver;
+  var SecondInningsFractionBalls;
   firstInningsScore = Number(document.getElementById('firstInningsScore').value);
-  firstInningsOvers = Number(document.getElementById('firstInningsOvers').value);
+  firstInningsOvers = Math.floor(Number(document.getElementById('firstInningsOvers').value));
+  firstInningsFractionBalls = Number((((document.getElementById('firstInningsOvers').value % 1).toFixed(2).substring(2))/10)/6);
   SecondInningsOver = Math.floor(Number(document.getElementById('SecondInningsOver').value));
+  SecondInningsFractionBalls = Number((((document.getElementById('SecondInningsOver').value % 1).toFixed(2).substring(2))/10)/6);
+  SecondInningsOver=SecondInningsOver+SecondInningsFractionBalls;
+  firstInningsOvers = firstInningsOvers + firstInningsFractionBalls;
   var rawTarget;
   var rawTargetOnOne;
   var rawTargetOnTwo;
@@ -109,7 +116,7 @@ th, td {
   
 if (firstInningsScore > 0 && firstInningsOvers > 0 && SecondInningsOver>0 && firstInningsOvers >= SecondInningsOver) 
 {
-  rawTarget = Math.ceil((firstInningsScore/firstInningsOvers)*SecondInningsOver)+1;
+  rawTarget = Math.round((firstInningsScore/firstInningsOvers)*SecondInningsOver)+1;
   rawTargetOnOne  =rawTarget;
 	rawTargetOnTwo  =rawTarget+1;
 	rawTargetOnThree=rawTargetOnTwo+(1);
