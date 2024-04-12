@@ -117,15 +117,15 @@ th, td {
 if (firstInningsScore > 0 && firstInningsOvers > 0 && SecondInningsOver>0 && firstInningsOvers >= SecondInningsOver) 
 {
   rawTarget = Math.round((firstInningsScore/firstInningsOvers)*SecondInningsOver)+1;
-  rawTargetOnOne  =rawTarget;
-	rawTargetOnTwo  =rawTarget+1;
-	rawTargetOnThree=rawTargetOnTwo+(1);
-	rawTargetOnFour =rawTargetOnThree+(1);
-	rawTargetOnFive =rawTargetOnFour+(2);
-	rawTargetOnSix  =rawTargetOnFive+(2);
-	rawTargetOnSeven=rawTargetOnSix+(2);
-	rawTargetOnEight=rawTargetOnSeven+(3);
-	rawTargetOnNine =rawTargetOnEight+(3);
+  rawTargetOnOne  =rawTarget+2;
+	rawTargetOnTwo  =rawTargetOnOne+3;
+	rawTargetOnThree=rawTargetOnTwo+(3);
+	rawTargetOnFour =rawTargetOnThree+(4);
+	rawTargetOnFive =rawTargetOnFour+(5);
+	rawTargetOnSix  =rawTargetOnFive+(6);
+	rawTargetOnSeven=rawTargetOnSix+(6);
+	rawTargetOnEight=rawTargetOnSeven+(7);
+	rawTargetOnNine =rawTargetOnEight+(7);
   
   if(rawTarget>firstInningsScore+1)
     rawTarget=firstInningsScore+1
